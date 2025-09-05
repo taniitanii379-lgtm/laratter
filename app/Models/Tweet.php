@@ -11,6 +11,7 @@ class Tweet extends Model
 
   protected $fillable = ['tweet'];
 
+  ///一対多の連携の設定　自分が一
   public function user()
   {
     return $this->belongsTo(User::class);

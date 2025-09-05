@@ -46,6 +46,7 @@ class User extends Authenticatable
         ];
     }
 
+    ///一対多の連携の設定　自分が多
     public function tweets()
     {
         return $this->hasMany(Tweet::class);
