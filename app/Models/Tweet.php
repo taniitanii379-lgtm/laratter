@@ -13,6 +13,12 @@ class Tweet extends Model
 
   protected $fillable = ['tweet'];
 
+    // 🔽 1対多の関係
+  public function comments()
+  {
+    return $this->hasMany(Comment::class)->orderBy('created_at', 'desc');
+  }
+
   ///一対多の連携の設定　自分が一
   public function user()
   {
